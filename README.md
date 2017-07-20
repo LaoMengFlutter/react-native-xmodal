@@ -6,7 +6,7 @@ react native 弹出框，类似android的DialogFragment
 使用：
 1、在整个app的最外层添加 ModalContainer 控件，一般项目我们都会用到react-navigation，所以使用react-navigation实例：
    
-  render() {
+      render() {
         return (
             <View  style={{flex:1}}>
                 <Navigator/>
@@ -17,13 +17,20 @@ react native 弹出框，类似android的DialogFragment
         );
     }
     
+    
  2、在需要弹出的地方调用： XModal.show(<Component/>);
+ 
  3、隐藏：XModal.hide();
  
  show方法等参数：
+ 
  component：要显示的组件
+ 
  animationType：modal的animationType ，默认‘fade’
+ 
  transparent：modal是否透明，默认true
+ 
  position：弹出的位置，默认居中，
  
  
+ ![image](https://github.com/781238222/react-native-xmodal/blob/master/examples/screen/123.png)
