@@ -12,6 +12,8 @@ import {StackNavigator} from "react-navigation";
 
 import {ModalContainer} from 'react-native-xmodal'
 import XModal from 'react-native-xmodal'
+import * as Animatable from 'react-native-animatable';
+
 
 export default class XModalDemo extends Component {
     render() {
@@ -31,8 +33,14 @@ class HomePage extends Component {
     render() {
         return (
             <View style={{flex:1}}>
+                <Button title='show modal(Bottom,height:200)' onPress={() => {
+                    XModal.show(<Modal1/>,{position:XModal.POSITION.BOTTOM,componentHeight:200});
+                }}/>
                 <Button title='show modal(Bottom)' onPress={() => {
                     XModal.show(<Modal1/>,{position:XModal.POSITION.BOTTOM});
+                }}/>
+                <Button title='show modal(Topheight:200)' onPress={() => {
+                    XModal.show(<Modal1/>,{position:XModal.POSITION.TOP,componentHeight:200});
                 }}/>
                 <Button title='show modal(Top)' onPress={() => {
                     XModal.show(<Modal1/>,{position:XModal.POSITION.TOP});
@@ -57,9 +65,15 @@ class MainPage extends Component {
 }
 
 class Modal1 extends Component {
+
+    componentDidMount() {
+
+    }
+
     render() {
         return (
-            <View style={{width: 300, height: 300, backgroundColor: 'red',justifyContent:'center'}}>
+            <View
+                style={{width: 300, height: 200, backgroundColor: 'red',justifyContent:'center'}}>
                 <Button title='hide modal' onPress={() => {
                     XModal.hide();
                 }}/>
