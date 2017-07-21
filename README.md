@@ -34,6 +34,7 @@ react native 弹出框，类似android的DialogFragment
  transparent：modal是否透明，默认true
  
  position：弹出的位置，默认居中，
- 
+
+ componentHeight:弹出控件的高度，如果position设置为TOP或者BOTTOM 设置此值将会从底部或者顶部弹出（动画效果），不设置无动画效果，
  
  ![image](https://github.com/781238222/react-native-xmodal/blob/master/examples/screen/123.png)
